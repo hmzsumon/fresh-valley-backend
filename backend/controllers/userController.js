@@ -17,7 +17,6 @@ exports.registerUser = catchAsyncErrors(async (req, res, next) => {
 				'http://res.cloudinary.com/dxct85gxy/image/upload/v1636459258/fresh-valley/users/hnfcudcnuugrmuw9009u.png',
 		};
 	} else {
-		console.log('no avatar');
 		myCloud = await cloudinary.v2.uploader.upload(req.body.avatar, {
 			folder: 'fresh-valley/users',
 			width: 150,
